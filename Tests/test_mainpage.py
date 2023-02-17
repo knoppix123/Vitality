@@ -21,3 +21,10 @@ class Testmenuitems(BaseClass):
         HP = Mainpage(self.driver)
         HP.getmainlogo()
         time.sleep(2)
+
+        HP.getmainbutton().click()
+        title = self.driver.title
+        print(title)
+        assert title == "Our Menu | Açaí Bowls | Vitality Bowls"
+
+

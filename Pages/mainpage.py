@@ -12,12 +12,19 @@ class Mainpage:
         self.driver = driver
     # =======main buttons=====
     mainlogo = (By.XPATH, "//img[@id='logo']")
+    main_button = ( By.CSS_SELECTOR, "[class='test menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-98']")
+
+
 
 
 
 
     def getmainlogo(self):
         return self.driver.find_element(*Mainpage.mainlogo)
+    def getmainbutton(self):
+        return self.driver.find_element(*Mainpage.main_button)
+
+
 
 
     # itemselection = (By.CSS_SELECTOR, "[class='mt-10	text-lg ']")
